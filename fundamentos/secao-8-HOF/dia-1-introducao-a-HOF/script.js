@@ -1,3 +1,4 @@
+//Ex.1
 const newEmployees = (callBack) => {
   const employees = {
     id1: callBack('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
@@ -13,3 +14,9 @@ const pessoaContratada = (nomeCompleto) => {
 }
 
 console.log(newEmployees(pessoaContratada));
+
+//Ex.2
+const numberChecker = (myNumber, number) => myNumber === number;
+const lotteryResults = () => {
+  const number = Math.floor((Math,random() *5) + 1);
+};
