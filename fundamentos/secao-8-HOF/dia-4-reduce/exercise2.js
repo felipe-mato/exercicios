@@ -68,3 +68,32 @@ function reduceNames(){
 }             //acumulador - esta aqui para representar o parametro. Ele precisa ser chamado de alguma coisa
               //book - É o corrente. book = books[0] pois books é o parametro/array sendo passado ao chamar a função
 console.log(reduceNames(books));
+
+//média de idade dos autores quando os livros foram lançados
+
+
+function calcIdade() {
+  const numberOfBooks = books.length;
+  const sumOfAges = books.reduce((acc, cur) => (
+                               //sum - acumulador
+                               //book - 1 elemento do array books
+                               //current, onde inicia. books[0]
+acc + (cur.releaseYear - cur.author.birthYear)), 0);
+//acumulador + ano de lançamento do livro - ano de nascimento do autro
+//0 = segundo parametro
+    return (sumOfAges / books.length) 
+
+}
+
+console.log(calcIdade(books));
+
+//retorna o livreo de maior nome
+
+function longestNamedBook() {
+  return books.reduce((biggestBook, currentBook) => {
+    if (currentBook.name.length > biggestBook.name.length) {
+      return currentBook;
+    }
+    return biggestBook;
+  });
+}
